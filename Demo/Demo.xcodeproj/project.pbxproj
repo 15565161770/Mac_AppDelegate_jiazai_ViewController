@@ -13,6 +13,8 @@
 		1820A8001F5CE56A004E3870 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1820A7FE1F5CE56A004E3870 /* HomeVC.xib */; };
 		1820A8041F5CE587004E3870 /* BoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820A8021F5CE587004E3870 /* BoxVC.m */; };
 		1820A8051F5CE587004E3870 /* BoxVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1820A8031F5CE587004E3870 /* BoxVC.xib */; };
+		1820A8091F5D2DD3004E3870 /* nextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820A8071F5D2DD3004E3870 /* nextVC.m */; };
+		1820A80A1F5D2DD3004E3870 /* nextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1820A8081F5D2DD3004E3870 /* nextVC.xib */; };
 		18C52FAC1F5BEFB700F39E74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C52FAB1F5BEFB700F39E74 /* AppDelegate.m */; };
 		18C52FAF1F5BEFB700F39E74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C52FAE1F5BEFB700F39E74 /* main.m */; };
 		18C52FB11F5BEFB700F39E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C52FB01F5BEFB700F39E74 /* Assets.xcassets */; };
@@ -29,6 +31,9 @@
 		1820A8011F5CE587004E3870 /* BoxVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxVC.h; sourceTree = "<group>"; };
 		1820A8021F5CE587004E3870 /* BoxVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxVC.m; sourceTree = "<group>"; };
 		1820A8031F5CE587004E3870 /* BoxVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxVC.xib; sourceTree = "<group>"; };
+		1820A8061F5D2DD3004E3870 /* nextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nextVC.h; sourceTree = "<group>"; };
+		1820A8071F5D2DD3004E3870 /* nextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nextVC.m; sourceTree = "<group>"; };
+		1820A8081F5D2DD3004E3870 /* nextVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nextVC.xib; sourceTree = "<group>"; };
 		18C52FA71F5BEFB700F39E74 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C52FAA1F5BEFB700F39E74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18C52FAB1F5BEFB700F39E74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +84,9 @@
 				1820A8011F5CE587004E3870 /* BoxVC.h */,
 				1820A8021F5CE587004E3870 /* BoxVC.m */,
 				1820A8031F5CE587004E3870 /* BoxVC.xib */,
+				1820A8061F5D2DD3004E3870 /* nextVC.h */,
+				1820A8071F5D2DD3004E3870 /* nextVC.m */,
+				1820A8081F5D2DD3004E3870 /* nextVC.xib */,
 				18C52FB01F5BEFB700F39E74 /* Assets.xcassets */,
 				18C52FB21F5BEFB700F39E74 /* MainMenu.xib */,
 				18C52FB51F5BEFB700F39E74 /* Info.plist */,
@@ -159,6 +167,7 @@
 				1820A8051F5CE587004E3870 /* BoxVC.xib in Resources */,
 				18C52FB11F5BEFB700F39E74 /* Assets.xcassets in Resources */,
 				18C52FB41F5BEFB700F39E74 /* MainMenu.xib in Resources */,
+				1820A80A1F5D2DD3004E3870 /* nextVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +183,7 @@
 				1820A8041F5CE587004E3870 /* BoxVC.m in Sources */,
 				18C52FAF1F5BEFB700F39E74 /* main.m in Sources */,
 				18C52FAC1F5BEFB700F39E74 /* AppDelegate.m in Sources */,
+				1820A8091F5D2DD3004E3870 /* nextVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

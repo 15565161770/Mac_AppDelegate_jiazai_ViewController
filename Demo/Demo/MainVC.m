@@ -10,10 +10,12 @@
 #import "HomeVC.h"
 #import "BoxVC.h"
 #import "AppDelegate.h"
+
+#import "nextVC.h"
 @interface MainVC ()
 @property (nonatomic, strong) HomeVC *homeVC;
 @property (nonatomic, strong) BoxVC *boxVC;
-
+@property (nonatomic, strong) nextVC *nextvc;
 @property (nonatomic, strong) NSWindowController *homeWindowController;
 @property (nonatomic, strong) NSWindowController *boxWondowController;
 @end
@@ -28,6 +30,79 @@
     // 第一个按钮的时候创建一个新的窗口，当点击第二个按钮的时候也创建一个新的窗口，同时还关闭主窗口。
     
     // 需要说明一个由于关闭窗口是windowController管的，所以想要在ViewController里面操作的话，就要将其传入。
+    
+    
+    // 通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(one:) name:@"one" object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(two:) name:@"two" object:nil];
+    
+    
+    [self addLeft];
+    [self addRight];
+   }
+
+- (void)addLeft{
+    self.homeVC = [[HomeVC alloc]initWithNibName:@"HomeVC" bundle:[NSBundle mainBundle]];
+    self.homeVC.view.wantsLayer = YES;
+    self.homeVC.view.layer.backgroundColor = [NSColor colorWithRed:245 / 255.0 green:245 / 255.0 blue:245 / 255.0 alpha:1 / 1.0].CGColor;
+    [self.view addSubview:self.homeVC.view];
+    
+    
+    self.homeVC.view.translatesAutoresizingMaskIntoConstraints = NO;
+    // 顶部
+    [self.homeVC.view.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    // 左面
+    [self.homeVC.view.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+    // 底部
+    [self.homeVC.view.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    // 右面
+    [self.homeVC.view.widthAnchor constraintEqualToConstant:250].active = YES;
+    
+
+}
+
+- (void)addRight{
+    self.boxVC = [[BoxVC alloc]initWithNibName:@"BoxVC" bundle:nil];
+    self.boxVC.view.wantsLayer = YES;
+    self.boxVC.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
+    [self.view addSubview:self.boxVC.view];
+    
+    self.boxVC.view.translatesAutoresizingMaskIntoConstraints = NO;
+    // 顶部
+    [self.boxVC.view.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    // 左面
+  [self.boxVC.view.leadingAnchor constraintEqualToAnchor:self.homeVC.view.trailingAnchor].active = YES;    // 底部
+    [self.boxVC.view.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    // 右面
+    [self.boxVC.view.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+}
+
+- (void)addRight1{
+    self.nextvc = [[nextVC alloc]initWithNibName:@"nextVC" bundle:nil];
+    self.nextvc.view.wantsLayer = YES;
+    self.nextvc.view.layer.backgroundColor = [NSColor yellowColor].CGColor;
+    [self.view addSubview:self.nextvc.view];
+    
+    self.nextvc.view.translatesAutoresizingMaskIntoConstraints = NO;
+    // 顶部
+    [self.nextvc.view.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    // 左面
+    [self.nextvc.view.leadingAnchor constraintEqualToAnchor:self.homeVC.view.trailingAnchor].active = YES;    // 底部
+    [self.nextvc.view.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    // 右面
+    [self.nextvc.view.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+
+}
+
+- (void)one:(NSNotification *)sender {
+    NSLog(@"通知1");
+    [self addRight];
+}
+
+- (void)two:(NSNotification *)sender{
+    NSLog(@"通知2");
+    [self addRight1];
 }
 
 - (IBAction)OneClick:(id)sender {

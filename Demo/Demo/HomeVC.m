@@ -7,9 +7,12 @@
 //
 
 #import "HomeVC.h"
-
+#import "BoxVC.h"
+#import "nextVC.h"
 @interface HomeVC ()
 
+@property (nonatomic, strong) BoxVC *boxVC;
+@property (nonatomic, strong) nextVC *nextvc;
 @end
 
 @implementation HomeVC
@@ -20,4 +23,39 @@
     self.title = @"第一";
 }
 
+
+
+- (IBAction)oneButton:(id)sender {
+    NSLog(@"111111----加载白色");
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"one" object:nil];
+    
+}
+- (IBAction)secondButton:(id)sender {
+    NSLog(@"222222----加载黄色");
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"two" object:nil];
+
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
