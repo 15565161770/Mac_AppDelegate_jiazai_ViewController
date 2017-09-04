@@ -1,0 +1,1 @@
+Mac OS 在AppDelegate中加载ViewController,MainVC中两个按钮点击其中一个，显示对应的ViewController，AppDelegate中的window关闭。
